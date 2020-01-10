@@ -1,0 +1,83 @@
+html {
+	position: relative;
+}
+body {
+	margin-bottom: 130px;
+}
+@media (min-width: 992px) {
+  #navbarUtama {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: transparent;
+  }
+  #navbarUtama .navbar-brand {
+    font-size: 1.75em;
+    -webkit-transition: all 0.3s;
+    transition: all 1s;
+  }
+  #navbarUtama .navbar-nav .nav-item .nav-link {
+    padding: 1.1em 1em !important;
+  }
+  #navbarUtama.navbar-shrink {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #212529;
+  }
+  #navbarUtama.navbar-shrink .navbar-brand {
+    font-size: 1.25em;
+    padding: 12px 0;
+  }
+}
+ #navbarUtama.navbar-shrink {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #212529;
+  }
+.jumbotron {
+	background-image: url('../img/bg1.jpg');	
+	background-size: cover;	
+	background-attachment: fixed;
+	color: #AEEAE3;
+	text-shadow: 6px 5px 10px black;
+	overflow: hidden;
+}
+.jumbotron img {
+	width: 20%;
+	border: 5px solid #eaeaea;
+	box-shadow: 6px 5px 10px black;
+}
+.pKiri, .pKanan {
+	opacity: 0;
+	transform: translate(-50px, 0) rotate(15deg);
+	transition: 1s;
+}
+.pKanan {
+	transform: translate(50px, 0) rotate(-15deg);
+}
+.pKiri.pMuncul, .pKanan.pMuncul {
+	opacity: 1;
+	transform: translate(0,0);
+}
+hr {
+	width: 250px;
+	border-top: 3px solid #999;
+}
+section {
+	min-height: 600px;
+	padding: 10px;
+}
+.portfolio {
+	background-color: #eee;
+}
+.portfolio .img-thumbnail {
+	opacity: 0;
+	transform: translate(0, 40px);
+	transition: .7s;
+}
+.portfolio .img-thumbnail.muncul {
+	opacity: 1;
+	transform: translate(0,0);
+}

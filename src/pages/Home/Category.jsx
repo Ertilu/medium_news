@@ -4,13 +4,10 @@ import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import QueueAnim from 'rc-queue-anim';
 import PropTypes from 'prop-types';
 import { Card, Col, Row } from 'antd';
-import { Art, Industry, IT } from '../data/dummyTopics';
+import { Link } from 'react-router-dom';
+import { Art, Industry, IT } from '../../data/dummyTopics';
 
 export default function Category(props) {
-  const toNews = (name) => {
-    alert(name)
-  };
-
   return (
     <ScrollOverPack id={props.id} className="content-wrapper page" style={{ height: '8000px' }}>
       <QueueAnim
@@ -44,25 +41,27 @@ export default function Category(props) {
               {
                 Art.map(data => (
                   <Col lg={{ span: 8 }} xs={{ span: 24 }} sm={{ span: 12 }} key={data.id}>
-                    <Card
-                      title={data.title}
-                      bordered={false}
-                      style={{ margin: '20px 10px' }}
-                      cover={
-                        <img
-                          alt="art"
-                          src={data.image}
-                        />
-                      }
-                      hoverable
-                      onClick={() => toNews(data.title)}
-                    />
+                    <Link to="/article">
+                      <Card
+                        title={data.title}
+                        bordered={false}
+                        style={{ margin: '20px 10px' }}
+                        cover={
+                          <img
+                            alt="art"
+                            src={data.image}
+                          />
+                        }
+                        hoverable
+                        onClick={() => toNews(data.title)}
+                      />
+                    </Link>
                   </Col>
                 ))
               }
             </Row>
           </div>
-            
+
           <div style={{ marginTop: '80px' }}>
             <h2>Industry</h2>
             <hr />
@@ -70,19 +69,21 @@ export default function Category(props) {
               {
                 Industry.map(data => (
                   <Col lg={{ span: 8 }} xs={{ span: 24 }} sm={{ span: 12 }} key={data.id}>
-                    <Card
-                      title={data.title}
-                      bordered={false}
-                      style={{ margin: '20px 10px' }}
-                      cover={
-                        <img
-                          alt="art"
-                          src={data.image}
-                        />
-                      }
-                      hoverable
-                      onClick={() => toNews(data.title)}
-                    />
+                    <Link to="/article">
+                      <Card
+                        title={data.title}
+                        bordered={false}
+                        style={{ margin: '20px 10px' }}
+                        cover={
+                          <img
+                            alt="art"
+                            src={data.image}
+                          />
+                        }
+                        hoverable
+                        onClick={() => toNews(data.title)}
+                      />
+                    </Link>
                   </Col>
                 ))
               }
@@ -96,19 +97,21 @@ export default function Category(props) {
               {
                 IT.map(data => (
                   <Col lg={{ span: 8 }} xs={{ span: 24 }} sm={{ span: 12 }} key={data.id}>
-                    <Card
-                      title={data.title}
-                      bordered={false}
-                      style={{ margin: '20px 10px' }}
-                      cover={
-                        <img
-                          alt="art"
-                          src={data.image}
-                        />
-                      }
-                      hoverable
-                      onClick={() => toNews(data.title)}
-                    />
+                    <Link to="/article">
+                      <Card
+                        title={data.title}
+                        bordered={false}
+                        style={{ margin: '20px 10px' }}
+                        cover={
+                          <img
+                            alt="art"
+                            src={data.image}
+                          />
+                        }
+                        hoverable
+                        onClick={() => toNews(data.title)}
+                      />
+                    </Link>
                   </Col>
                 ))
               }
@@ -123,11 +126,3 @@ export default function Category(props) {
 Category.propTypes = {
   id: PropTypes.string,
 };
-
-{/* 
-key="image"
-        className="image4 bottom-wrapper"
-        animation={{
-          y: 0, opacity: 1, duration: 550, delay: 150, ease: 'easeOutQuad',
-        }}
-        style={{ transform: 'translateY(150px)', opacity: 0 }} */}

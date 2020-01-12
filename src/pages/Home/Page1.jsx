@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TweenOne from 'rc-tween-one';
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import { Icon, Button } from 'antd';
+import { Icon } from 'antd';
 import QueueAnim from 'rc-queue-anim';
+import { Link } from 'react-scroll';
 
 export default function Page1({ isMobile }) {
   return (
@@ -24,10 +25,19 @@ export default function Page1({ isMobile }) {
         <p key="p" style={{ maxWidth: 310 }}>Are you ready for read news today ? Click button below to start reading。</p>
         <div key="button">
           <a>
-            <Button type="primary" size="large">
-              Lets Go !
+            <Link
+              href="#"
+              className="navbar-brand scroll"
+              activeClass="active"
+              spy
+              smooth
+              offset={-70}
+              duration={500}
+              to="news"
+            >
+              Let's go
               <Icon type="right" />
-            </Button>
+            </Link>
           </a>
         </div>
       </QueueAnim>

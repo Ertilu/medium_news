@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './src/Home';
+import Index from './src/';
 
 function App() {
   return (
-    <Home />
+    <Index />
   );
 }
 

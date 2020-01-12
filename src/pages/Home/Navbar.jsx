@@ -12,9 +12,7 @@ export default class Navbar extends React.Component {
         $('#navbarUtama').removeClass('navbar-shrink');
       }
     };
-    // Collapse now if page is not at top
     navbarCollapse();
-    // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
   }
 
@@ -60,6 +58,20 @@ export default class Navbar extends React.Component {
               </li>
               <li className="nav-item">
                 <Link
+                  href="#"
+                  className="nav-link scroll"
+                  activeClass="active"
+                  to="news"
+                  spy
+                  smooth
+                  offset={-70}
+                  duration={500}
+                >
+                  News
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
                   className="nav-link scroll"
                   activeClass="active"
                   to="category"
@@ -69,20 +81,6 @@ export default class Navbar extends React.Component {
                   duration={500}
                 >
                   Category
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  href="#"
-                  className="nav-link scroll"
-                  activeClass="active"
-                  to="login"
-                  spy
-                  smooth
-                  offset={-70}
-                  duration={500}
-                >
-                  Login
                 </Link>
               </li>
               <li className="nav-item">

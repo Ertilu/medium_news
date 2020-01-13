@@ -7,8 +7,8 @@ import Banner from './Banner';
 import Page1 from './Page1';
 import Category from './Category';
 import News from './News';
-import Page3 from './Page3';
-import Footer from './Footer';
+import Page2 from './Page2';
+import Footer from '../../components/Footer';
 import './static/style';
 
 let isMobile = false;
@@ -49,7 +49,7 @@ class Home extends React.PureComponent {
         <Page1 key="page1" isMobile={this.state.isMobile} />,
         <News key="News" id="news" />,
         <Category id="category" setTopic={this.setTopic} />,
-        <Page3 key="page3" isMobile={this.state.isMobile} id="register" />,
+        <Page2 key="page2" isMobile={this.state.isMobile} id="register" />,
         <Footer key="footer" />,
         <DocumentTitle title="My Medium News" key="title" />,
       ]

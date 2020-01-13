@@ -5,7 +5,6 @@ import DocumentTitle from 'react-document-title';
 import Navbar from '../../components/Navbar';
 import Detail from './Detail';
 
-
 let isMobile = false;
 enquireScreen((b) => {
   isMobile = b;

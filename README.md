@@ -2,13 +2,13 @@
 
 ![version](https://img.shields.io/badge/version-1.1.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/paper-dashboard-react.svg?maxAge=2592000)]() [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/paper-dashboard-react.svg?maxAge=2592000)]
 
-This app help you to manage your inventory you can add your product, edit product, or delete product with this app.
+Get content from medium by medium rss feed.
 
 ## Created with
 
 | React JS | UI Framework |
 | --- | --- |
-| [![React JS](https://cdn.auth0.com/blog/react-js/react.png)](https://reactjs.org) | [![UI Framework](https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg)](https://ant.design/)
+| [![React JS](https://www.fastsolutionlab.com/common/images/reactjs_icon.png)](https://reactjs.org) | [![UI Framework](https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg)](https://ant.design/)
 
 ## Table of Contents
 

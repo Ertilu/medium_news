@@ -30,8 +30,8 @@ export default function Banner({ onEnterChange, id }) {
           <GitHubButton
             key="github-button"
             type="stargazers"
-            namespace="ant-design"
-            repo="ant-design"
+            namespace="Ertilu"
+            repo="medium_news"
           />
         </QueueAnim>
         <Icon type="down" className="down" />

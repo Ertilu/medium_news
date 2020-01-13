@@ -35,6 +35,12 @@ class Home extends React.PureComponent {
       isFirstScreen: mode === 'enter',
     });
   }
+
+  setTopic = (data) => {
+    // eslint-disable-next-line react/prop-types
+    this.props.setTopic(data);
+  }
+
   render() {
     return (
       [
@@ -42,7 +48,7 @@ class Home extends React.PureComponent {
         <Banner key="banner" onEnterChange={this.onEnterChange} id="home" />,
         <Page1 key="page1" isMobile={this.state.isMobile} />,
         <News key="News" id="news" />,
-        <Category id="category" />,
+        <Category id="category" setTopic={this.setTopic} />,
         <Page3 key="page3" isMobile={this.state.isMobile} id="register" />,
         <Footer key="footer" />,
         <DocumentTitle title="My Medium News" key="title" />,

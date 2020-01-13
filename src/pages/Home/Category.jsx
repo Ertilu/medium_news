@@ -8,6 +8,10 @@ import { Link } from 'react-router-dom';
 import { Art, Industry, IT } from '../../data/dummyTopics';
 
 export default function Category(props) {
+  const toArticle = (data) => {
+    props.setTopic(data);
+  };
+
   return (
     <ScrollOverPack id={props.id} className="content-wrapper page" style={{ height: '8000px' }}>
       <QueueAnim
@@ -53,7 +57,7 @@ export default function Category(props) {
                           />
                         }
                         hoverable
-                        onClick={() => toNews(data.title)}
+                        onClick={() => toArticle(data.title)}
                       />
                     </Link>
                   </Col>
@@ -81,7 +85,7 @@ export default function Category(props) {
                           />
                         }
                         hoverable
-                        onClick={() => toNews(data.title)}
+                        onClick={() => toArticle(data.title)}
                       />
                     </Link>
                   </Col>
@@ -109,7 +113,7 @@ export default function Category(props) {
                           />
                         }
                         hoverable
-                        onClick={() => toNews(data.title)}
+                        onClick={() => toArticle(data.title)}
                       />
                     </Link>
                   </Col>
@@ -125,4 +129,5 @@ export default function Category(props) {
 
 Category.propTypes = {
   id: PropTypes.string,
+  setTopic: PropTypes.func,
 };

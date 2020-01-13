@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { enquireScreen } from 'enquire-js';
 import DocumentTitle from 'react-document-title';
-// import Header from './Header';
 import Navbar from '../../components/Navbar';
+import Article from './Article';
 
 let isMobile = false;
 enquireScreen((b) => {
@@ -33,6 +34,7 @@ class App extends React.Component {
     return (
       [
         <Navbar key="header" isFirstScreen={this.state.isFirstScreen} isMobile={this.state.isMobile} />,
+        <Article topic={this.props.topic} />,
         <DocumentTitle title="My Medium News" key="title" />,
       ]
     );
